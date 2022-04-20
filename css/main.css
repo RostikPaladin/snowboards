@@ -149,7 +149,7 @@ p {
 	text-transform: uppercase;
 }
 .row-2 {
-	padding: 156px 0 210px 0;
+	padding: 70px 0 250px 0;
 }
 .row-3 {
 	padding: 246px 0 210px 0;
@@ -209,6 +209,7 @@ Clearfix
 	background: #000;
 	padding-left: 30px;
 	padding-right: 30px;
+	transition: .4s;
 }
 .btn:hover {
 	color: #000;
@@ -293,13 +294,15 @@ header {
 .btn {
 	transform: translate(0px, 200%);
 	opacity: 0;
-	transition: all 0.8s ease .3s;
 }
 .btn._active {
 	transform: translate(0px, 0px);
 	opacity: 1;
 }
 
+.delay {
+	transition: all 0.8s ease 0.4s;
+}
 /*
 Анимации текста
 */
@@ -313,9 +316,27 @@ header {
 ._active ._anim-show {
 	opacity: 1;
 	transform: translate(0px, 0px);
-
 }
 
+._anim-show-reverse {
+	transform: translate(80%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+._anim-show-reverse._active {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+
+._anim-show-simple {
+	transform: translate(0px, 0px);
+	opacity: 0;
+	transition: all 2s ease 0.6s;
+}
+._anim-show-simple._active {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
 /*
 Анимации заголовка текста
 */
@@ -360,16 +381,6 @@ header {
 	opacity: 0;
 }
 
-.move-left-first-img,
-.move-left-first-sign {
-	transition: all 0.4s ease 0s;
-}
-
-.move-left-second-img,
-.move-left-second-sign {
-	transition: all 0.4s ease .4s;
-}
-
 ._active .move-left-first-img,
 ._active .move-left-first-sign,
 ._active .move-left-second-img,
@@ -390,15 +401,21 @@ header {
 	opacity: 0;
 }
 
-.move-right-first-img,
-.move-right-first-sign {
+.move-left-first-img,
+.move-right-first-img {
 	transition: all 0.4s ease 0s;
 }
-
-.move-right-second-img,
-.move-right-second-sign {
+.move-left-second-img,
+.move-right-second-img {
 	transition: all 0.4s ease .4s;
 }
+.delay-middle-sign {
+	transition: all 0.4s ease 0s;
+}
+.delay-edge-sign {
+	transition: all 0.4s ease .4s;
+}
+
 
 /*
 Анимации
@@ -419,7 +436,7 @@ header {
 }
 .ex {
 	margin-top: 30px;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 }
 
 /*
@@ -430,7 +447,6 @@ header {
 .slider {
 	width: 340px;
 	height: 404px;
-	border: 2px solid yellow;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -501,7 +517,7 @@ header {
 }
 
 .features .col-1-4 {
-	transition: .1s;
+	transition: .4s;
 }
 .features .col-1-4:hover {
 	background: #000;
