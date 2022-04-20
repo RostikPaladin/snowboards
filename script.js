@@ -19,7 +19,11 @@ btnPrev.addEventListener('click', function(){
 	sliderLine.style.left = -offset1 + "px";
 });
 // Анимация заголовка
-
+let btn = document.querySelector('.btn'); 
+let moveLeftSecondSign = document.querySelector('.move-left-second-sign'); 
+let moveRightSecondSign = document.querySelector('.move-right-second-sign');
+let moveLeftFirstSign = document.querySelector('.move-left-first-sign'); 
+let moveRightFirstSign = document.querySelector('.move-right-first-sign');
 const animItems = document.querySelectorAll('._anim-items');
 
  if (animItems.length > 0) {
@@ -39,12 +43,28 @@ const animItems = document.querySelectorAll('._anim-items');
 
 			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
 				animItem.classList.add('_active');
+
 			} else {
+
 				if (!animItem.classList.contains('_anim-no-hide')) {
 					animItem.classList.remove('_active');
 				}
 			}
+			if (animItems[1].classList.contains('_active')) {
+			setTimeout(() => {
+	btn.classList.remove('delay');
+	}, 100);
 		}
+			if (animItems[6].classList.contains('_active')) {
+			setTimeout(() => {
+	moveLeftSecondSign.classList.remove('delay-edge-sign');
+	moveRightSecondSign.classList.remove('delay-edge-sign');
+	moveLeftFirstSign.classList.remove('delay-middle-sign');
+	moveRightFirstSign.classList.remove('delay-middle-sign');
+	}, 800);
+		}
+			
+	  }
 	}
 	function offset(el) {
 		const rect = el.getBoundingClientRect(),
@@ -55,5 +75,5 @@ const animItems = document.querySelectorAll('._anim-items');
 
 	setTimeout(() => {
 		animOnScroll();
-	}, 300);
+	}, 400);
 }
