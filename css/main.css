@@ -1,0 +1,568 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+=================
+Пользовательские стили
+=================
+*/
+@font-face {
+	font-family: "Proximanova_regular";
+	src: url("../fonts/Proximanova_regular.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Proximanova_bold";
+	src: url("../fonts/Proximanova_bold.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Proximanova_extrabold";
+	src: url("../fonts/Proximanova_extrabold.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+body {
+	background: #fff;
+	color: #fff;
+}
+h1 {
+	font-family: "Proximanova_extrabold";
+	font-size: 70px;
+	line-height: 1.5em;
+}
+h2 {
+	font-family: "Proximanova_extrabold";
+	font-size: 46px;
+	line-height: 1.5em;
+}
+h3 {
+	font-family: "Proximanova_bold";
+	font-size: 20px;
+}
+h4 {
+	font-family: "Proximanova_extrabold";
+	font-size: 16px;
+	line-height: 3em;
+	text-transform: uppercase;
+}
+h5 {
+	font-family: "Proximanova_extrabold";
+	font-size: 14px;
+	line-height: 1.5em;
+}
+p {
+	font-family: "Proximanova_regular";
+	font-size: 14px;
+	line-height: 2em;
+}
+
+/*
+=================
+Сетка
+=================
+*/
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.container,
+.grid {
+	margin: 0 auto;
+	width: 988px;
+}
+.container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.grid,
+.col-1-4 {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.col-1-4 {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+}
+
+/*
+=================
+Полосы
+=================
+*/
+
+.row {
+	padding: 10px 50px;
+	background: #000;
+}
+.row-1 {
+	padding: 260px 0 176px 0;
+	text-transform: uppercase;
+}
+.row-2 {
+	padding: 156px 0 210px 0;
+}
+.row-3 {
+	padding: 246px 0 210px 0;
+}
+.row-4 {
+	padding: 120px 0 135px 0;
+}
+.row-5 {
+	padding: 80px 0 10px 0;
+}
+
+/*
+=================
+Ссылки
+=================
+*/
+a {
+text-decoration: none;
+}
+
+.nav_container a {
+	font-family: "Proximanova_bold";
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #fff;
+	transition: 0.2s;
+}
+
+/*
+==============
+Clearfix
+==============
+*/
+.group::before,
+.group::after {
+	content: "";
+	display: table;
+}
+.group::after {
+	clear: both;
+}
+.group {
+	clear: both;
+	*zoom: 1;
+}
+
+/*
+===============
+Кнопки
+===============
+*/
+
+.btn {
+	display: inline-block;
+	margin: 0;
+	cursor: pointer;
+	background: #000;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.btn:hover {
+	color: #000;
+	background: #00b5d4;
+}
+
+/*
+===============
+Навигация
+===============
+*/
+.navbar {
+	width: 100%;
+	z-index: 9999;
+}
+.nav_container {
+	height: inherit;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.navbar_wrap {
+	height: inherit;
+	align-items: center;
+}
+.navbar_menu {
+	height: inherit;
+	align-items: center;
+}
+.navbar_menu li {
+	display: inline-block;
+	padding-left: 40px;
+}
+.navbar_wrap {
+	display: flex;
+	flex-flow: row nowrap;
+}
+.navbar_menu a:hover {
+	color: #00b5d4;
+}
+
+header {
+	position: fixed;
+	top: 0;
+}
+
+/*
+===========
+Первый участок
+===========
+*/
+.back {
+	margin-top: 40px;
+	background: url(../img/slider1.png) no-repeat center top / cover;
+	height: 617px;
+}
+.back h1 {
+	color: #000;
+}
+.title {
+	display: block;
+	margin-left: 29%;
+}
+.btn {
+	margin-top: 25px;
+	margin-left: 280px;
+}
+
+/*
+Анимации шапка
+*/
+
+.first-title {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+.first-title._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+.btn {
+	transform: translate(0px, 200%);
+	opacity: 0;
+	transition: all 0.8s ease .3s;
+}
+.btn._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+
+/*
+Анимации текста
+*/
+
+._anim-show {
+	transform: translate(-100%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+._anim-show._active,
+._active ._anim-show {
+	opacity: 1;
+	transform: translate(0px, 0px);
+
+}
+
+/*
+Анимации заголовка текста
+*/
+.title-text {
+	transform: translate(80%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+.title-text._active,
+._active .title-text {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+/*
+Анимации заголовок блочков и анимация ex
+*/
+.title-ex {
+	transform: translate(0px, -120%);
+	opacity: 0;
+	transition: all 1s ease 0s;
+}
+
+.ex {
+	transform: translate(0px, 300%);
+	opacity: 0;
+	transition: all 1s ease 0.3s;
+}
+._active .title-ex,
+._active .ex {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+/*
+Анимация 4 блочка
+*/
+
+.move-left-first-img,
+.move-left-first-sign,
+.move-left-second-img,
+.move-left-second-sign {
+	transform: translate(-80%, 0px);
+	opacity: 0;
+}
+
+.move-left-first-img,
+.move-left-first-sign {
+	transition: all 0.4s ease 0s;
+}
+
+.move-left-second-img,
+.move-left-second-sign {
+	transition: all 0.4s ease .4s;
+}
+
+._active .move-left-first-img,
+._active .move-left-first-sign,
+._active .move-left-second-img,
+._active .move-left-second-sign,
+._active .move-right-first-img,
+._active .move-right-first-sign,
+._active .move-right-second-img,
+._active .move-right-second-sign {
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+
+.move-right-first-img,
+.move-right-first-sign,
+.move-right-second-img,
+.move-right-second-sign {
+	transform: translate(80%, 0px);
+	opacity: 0;
+}
+
+.move-right-first-img,
+.move-right-first-sign {
+	transition: all 0.4s ease 0s;
+}
+
+.move-right-second-img,
+.move-right-second-sign {
+	transition: all 0.4s ease .4s;
+}
+
+/*
+Анимации
+*/
+/*
+===========
+Второй участок
+===========
+*/
+
+.font {
+	color: #000;
+	text-align: center;
+	text-transform: uppercase;
+}
+.font h2 {
+	margin-bottom: 10px;
+}
+.ex {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+/*
+===========
+Слайд шоу
+===========
+*/
+.slider {
+	width: 340px;
+	height: 404px;
+	border: 2px solid yellow;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.slider-line {
+	width: 1700px;
+	height: 400px;
+	display: flex;
+	position: relative;
+	margin-left: -680px;
+	left: 0;
+	transition: .6s;
+}
+.slider-line img {
+	width: 100%;
+	height: 100%;
+	padding-left: 85px;
+	padding-right: 85px;
+}
+.slider-buttons {
+	position: relative;
+	margin-top: -320px;
+}
+.slider-buttons button {
+	background: #fff;
+	 background-color: rgba(255, 255, 255, 0);
+	border: none;
+	overflow: visible;
+	cursor: pointer;
+}
+.btn-prev {
+	margin-right: 900px;
+}
+
+/*
+===========
+Третий участок
+===========
+*/
+.background {
+	background: url(../img/company.png) no-repeat center top / cover;
+}
+.title-company {
+	width: 600px;
+}
+.title-company h2 {
+	margin-bottom: 20px;
+}
+
+/*
+===========
+Четвертый участок
+===========
+*/
+.features {
+	color: #000;
+}
+.title-4 {
+	text-align: center;
+	color: #000;
+	text-transform: uppercase;
+}
+.col-1-4 h5 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.col-1-4 img {
+	margin-top: 10px;
+}
+
+.features .col-1-4 {
+	transition: .1s;
+}
+.features .col-1-4:hover {
+	background: #000;
+	color: #fff;
+}
+
+/*
+===========
+Пятый участок
+===========
+*/
+
+.black-back {
+	background: #000;
+}
+.inform img {
+	margin-top: 70px;
+	width: 100%;
+}
+.inform a {
+	color: #fff;
+	transition: .2s;
+}
+.inform a:hover {
+	color: #00b5d4;
+}
+
+input {
+	padding: 12px;
+	float: left;
+	width: 70%;
+	border: none;
+	background: #c6c6c6;
+
+}
+input:focus {
+	outline: 0;
+	background: #fff;
+}
+.inform button {
+	overflow: visible;
+	float: right;
+	position: relative;
+	height: 39px;
+	width: 30%;
+	background: #c6c6c6;
+	font-family: "Proximanova_extrabold";
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+	transition: .05s;
+	border-left: 1px solid black;
+}
+.inform button:hover {
+	background: #00b5d4;
+	font-size: 16px;
+}
+
+footer .container {
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
